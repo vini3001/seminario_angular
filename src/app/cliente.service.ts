@@ -30,6 +30,8 @@ export class ClienteService {
     var index = this.clientes.findIndex((t=>t.id == id))
     this.clientes[index] = cliente
 
+    console.log(this.clientes)
+
     const strClientes = JSON.stringify(this.clientes)
     localStorage.setItem('clientes', strClientes)
   }

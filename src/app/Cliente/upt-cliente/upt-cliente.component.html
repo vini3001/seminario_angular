@@ -1,37 +1,38 @@
-<div style="display: flex; justify-content: center;">
+<div style="display: flex; flex-direction: column; height: 80vh; justify-content: center; align-items: center;">
+    <h2>Formulário de atualização</h2>
     <form (ngSubmit)="submitForm()" style="margin-top: 30px; width: 50%; background-color: #d3d3d3; padding: 10px; border-radius: 10px;" class="gap-3">
         <div class="row d-flex">
           <div class="form-group flex-fill col-md-4">
             <label for="inputName">Nome</label>
-            <input type="email" name="nome" [(ngModel)]="cliente.cep" class="form-control" id="inputName" placeholder="Digite o seu nome...">
+            <input type="email" name="nome" [(ngModel)]="this.cliente.nome" class="form-control" id="inputName" placeholder="Digite o seu nome...">
           </div>
           <div class="form-group flex-fill col-md-4">
             <label for="inputPassword4">Senha</label>
-            <input type="password" name="nome" [(ngModel)]="cliente.senha" class="form-control" id="inputPassword4" placeholder="Digite a sua senha...">
+            <input type="password" name="senha" [(ngModel)]="this.cliente.senha" class="form-control" id="inputPassword4" placeholder="Digite a sua senha...">
           </div>
         </div>
         <div class="row d-flex justify-content-center">
             <div class="form-group flex-fill col-md-3">
               <label for="inputStreet">Rua</label>
-              <input type="text" name="nome" class="form-control" [(ngModel)]="cliente.rua" id="inputStreet" placeholder="(Rua Alburquerque Lins)">
+              <input type="text" name="rua" class="form-control" [(ngModel)]="this.cliente.rua" id="inputStreet" placeholder="(Rua Alburquerque Lins)">
             </div>
             <div class="form-group flex-fill col-md-1">
               <label for="inputNumber">Nº</label>
-              <input type="text" name="nome" class="form-control" [(ngModel)]="cliente.numero" id="inputNumber" placeholder="(123)">
+              <input type="text" name="Nº End" class="form-control" [(ngModel)]="this.cliente.numero" id="inputNumber" placeholder="(123)">
             </div>
             <div class="form-group flex-fill col-md-2">
               <label for="inputCity">Cidade</label>
-              <input type="text" name="nome" class="form-control" [(ngModel)]="cliente.cidade" id="inputCity" placeholder="(São Paulo)">
+              <input type="text" name="Cidade" class="form-control" [(ngModel)]="this.cliente.cidade" id="inputCity" placeholder="(São Paulo)">
             </div>
             <div class="form-group flex-fill col-md-2">
               <label for="inputCep">CEP</label>
-              <input type="text" name="nome" class="form-control" [(ngModel)]="cliente.cep" id="inputCep" placeholder="(14090054)">
+              <input type="text" name="cep" class="form-control" [(ngModel)]="this.cliente.cep" id="inputCep" placeholder="(14090054)">
             </div>
         </div>
           <div class="row d-flex justify-content-start">
             <div class="form-group col-md-5">
               <label for="inputState">Estado</label>
-              <select name="nome" [(ngModel)]="cliente.estado" id="inputState" class="form-control">
+              <select name="estado" [(ngModel)]="this.cliente.estado" id="inputState" class="form-control">
                 <option selected>Selecione o seu estado...</option>
                 <option>Acre</option>
                 <option>Alagoas</option>
@@ -64,11 +65,15 @@
             </div>
             <div class="form-group col-md-3">
               <label for="inputCpf">CPF</label>
-              <input type="text" name="nome" [(ngModel)]="cliente.cpf" class="form-control" id="inputCpf" placeholder="(473.345.238-67)">
+              <input type="text" name="cpf" [(ngModel)]="this.cliente.cpf" class="form-control" id="inputCpf" placeholder="(473.345.238-67)">
             </div>
             <div class="form-group col-md-3">
               <label for="inputRg">RG</label>
-              <input type="text" name="nome" [(ngModel)]="cliente.rg" class="form-control" id="inputRg" placeholder="(47.345.238-6)">
+              <input type="text" name="rg" [(ngModel)]="this.cliente.rg" class="form-control" id="inputRg" placeholder="(47.345.238-6)">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="inputLivro">Livro</label>
+              <input type="text" name="livro" [(ngModel)]="this.cliente.livro" class="form-control" id="inputLivro">
             </div>
           </div>
         <div style="margin-left: 1px;" class="row d-flex">

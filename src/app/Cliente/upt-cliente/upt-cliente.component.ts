@@ -23,6 +23,6 @@ export class UptClienteComponent implements OnInit {
 
   submitForm() {
     this.service.alterar(this.cliente.id as number, this.cliente)
-    this.router.navigate(['/clientes'])
+    this.router.navigate(['/'])
   }
 }

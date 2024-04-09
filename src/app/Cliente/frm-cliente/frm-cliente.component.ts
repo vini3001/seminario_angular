@@ -15,6 +15,6 @@ export class FrmClienteComponent {
 
     submitForm() {
       this.service.inserir(this.cliente)
-      this.router.navigate(['/clientes'])
+      this.router.navigate(['/'])
     }
 }
