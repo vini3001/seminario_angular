@@ -1,1 +1,57 @@
-<p>lst-cliente works!</p>
+<body>
+<head>
+  <title>Listagem de Clientes</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+<button style="margin: 5px;" type="button" (click)="onClick()" class="btn btn-success">Criar usuário</button>
+
+<h2>Listagem de Clientes</h2>
+
+<table>
+  <ul>
+    <li *ngFor="let cliente of clientes">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>RG</th>
+            <th>Rua</th>
+            <th>Numero</th>
+            <th>Cidade</th>
+            <th>CEP</th>
+            <th>Estado</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>{{cliente.id}}</td>
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.cpf}}</td>
+            <td>{{cliente.rg}}</td>
+            <td>{{cliente.rua}}</td>
+            <td>{{cliente.numero}}</td>
+            <td>{{cliente.cidade}}</td>
+            <td>{{cliente.cep}}</td>
+            <td>{{cliente.estado}}</td>
+            <td><button class="btn btn-warning" (click)="openEdit(cliente.id)">Editar</button></td>
+            <td><button class="btn btn-danger" (click)="deleteClient(cliente.id)">Deletar</button></td>
+          </tr>
+    </li>
+  </ul>
+</table>
+</body>

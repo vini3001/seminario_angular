@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FrmEmprestimoComponent } from './frm-emprestimo.component';
+import { UptClienteComponent } from './upt-cliente.component';
 
-describe('FrmEmprestimoComponent', () => {
-  let component: FrmEmprestimoComponent;
-  let fixture: ComponentFixture<FrmEmprestimoComponent>;
+describe('UptClienteComponent', () => {
+  let component: UptClienteComponent;
+  let fixture: ComponentFixture<UptClienteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FrmEmprestimoComponent]
+      declarations: [UptClienteComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(FrmEmprestimoComponent);
+    fixture = TestBed.createComponent(UptClienteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
