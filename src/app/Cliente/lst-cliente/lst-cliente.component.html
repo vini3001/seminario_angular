@@ -5,6 +5,10 @@
     table {
       width: 100%;
       border-collapse: collapse;
+      padding: 10px;
+    }
+    table ul {
+      all: unset;
     }
     th, td {
       border: 1px solid #ddd;
@@ -18,7 +22,7 @@
 </head>
 <body>
 
-<button style="margin: 5px;" type="button" (click)="onClick()" class="btn btn-success">Criar usuário</button>
+<button style="margin: 10px;" type="button" (click)="onClick()" class="btn btn-success">Criar usuário</button>
 
 <h2>Listagem de Clientes</h2>
 
@@ -35,6 +39,7 @@
             <th>Cidade</th>
             <th>CEP</th>
             <th>Estado</th>
+            <th>Livro</th>
             <th></th>
             <th></th>
           </tr>
@@ -48,6 +53,7 @@
             <td>{{cliente.cidade}}</td>
             <td>{{cliente.cep}}</td>
             <td>{{cliente.estado}}</td>
+            <td>{{cliente.livro}}</td>
             <td><button class="btn btn-warning" (click)="openEdit(cliente.id)">Editar</button></td>
             <td><button class="btn btn-danger" (click)="deleteClient(cliente.id)">Deletar</button></td>
           </tr>

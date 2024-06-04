@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "biblioteca_reges": {
+    "seminario_lib_reges": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/biblioteca_reges",
+            "outputPath": "dist/seminario_lib_reges",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -40,8 +40,6 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/popper.js/dist/umd/popper.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
@@ -73,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "biblioteca_reges:build:production"
+              "buildTarget": "seminario_lib_reges:build:production"
             },
             "development": {
-              "buildTarget": "biblioteca_reges:build:development"
+              "buildTarget": "seminario_lib_reges:build:development"
             }
           },
           "options": {
@@ -87,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "biblioteca_reges:build"
+            "buildTarget": "seminario_lib_reges:build"
           }
         },
         "test": {
