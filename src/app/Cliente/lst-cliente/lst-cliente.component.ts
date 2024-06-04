@@ -23,19 +23,34 @@ export class LstClienteComponent implements OnInit {
   }
 
   openEdit(id: number | undefined) {
-    console.log(id)
     this.router.navigate([`/update-cliente/`, id  ])
   }
 
   deleteClient(id: number | undefined) {
-    this.service.deletar(id as number)
+    this.service.deletar(id as number).subscribe({
+      next: () => {
+        alert('usuário deletado com sucesso')
+      }
+    })
+
+    location.reload()
   }
 
   obterClientes() {
-    this.clientes = this.service.obterTodos()
+    this.service.obterTodos().subscribe({
+      next: (dados) => {
+        console.log(dados)
+        this.clientes = dados
+      }
+    })
   }
 
   obterCliente(id: number) {
-    this.clienteFrm = this.service.obterPorId(id)
+    this.service.obterPorId(id).subscribe({
+      next: (dados) => {
+        console.log(dados)
+        this.clienteFrm = dados
+      }
+    })
   }
 }

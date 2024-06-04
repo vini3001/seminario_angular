@@ -10,19 +10,28 @@ import { Cliente } from '../../models/Cliente';
 })
 export class UptClienteComponent implements OnInit {
   cliente: Cliente = {}
+  clienteExemp: Cliente = {}
 
   constructor(private service: ClienteService, private router: Router, private route: ActivatedRoute) {}
   ngOnInit(): void {
     const id = parseFloat(this.route.snapshot.paramMap.get('id') as string);
     const client = this.service.obterPorId(id)
     
-    this.cliente = JSON.parse(JSON.stringify(client));
-
-    console.log(this.cliente.cep)
+    client.subscribe({
+      next: (dados) => {
+        console.log(dados)
+        this.cliente = dados
+      }
+    });
   }
 
   submitForm() {
-    this.service.alterar(this.cliente.id as number, this.cliente)
-    this.router.navigate(['/clientes'])
+    console.log(this.cliente)
+    this.service.alterar(this.cliente.id as number, this.cliente).subscribe({
+      next: (dado) => {
+        alert('usuário alterado com sucesso' + dado)
+      }
+    })
+    this.router.navigate(['/'])
   }
 }

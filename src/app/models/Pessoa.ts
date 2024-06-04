@@ -1,6 +1,6 @@
 export abstract class Pessoa {
     id?: number
-    nome?: string
+    nomeCompleto?: string
     rua?: string
     senha?: string
     numero?: string
